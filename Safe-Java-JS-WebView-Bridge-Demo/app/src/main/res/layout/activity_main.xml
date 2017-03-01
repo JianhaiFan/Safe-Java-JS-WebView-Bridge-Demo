@@ -1,16 +1,34 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<com.xiaofan.safe_java_js_webview_bridge_demo.percent.PercentLinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:paddingBottom="@dimen/activity_vertical_margin"
-    android:paddingLeft="@dimen/activity_horizontal_margin"
-    android:paddingRight="@dimen/activity_horizontal_margin"
-    android:paddingTop="@dimen/activity_vertical_margin"
+    android:orientation="vertical"
     tools:context="com.xiaofan.safe_java_js_webview_bridge_demo.MainActivity">
 
-    <TextView
-        android:layout_width="wrap_content"
+    <com.xiaofan.safe_java_js_webview_bridge_demo.percent.PercentLinearLayout
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Hello World!" />
-</RelativeLayout>
+        app:layout_heightPercent="12.5%w"
+        android:background="@drawable/shape_gradient_title"
+        >
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="#ffffff"
+            android:gravity="center"
+            android:layout_gravity="center"
+            android:text="H5详情页面"/>
+
+    </com.xiaofan.safe_java_js_webview_bridge_demo.percent.PercentLinearLayout>
+
+    <com.xiaofan.safe_java_js_webview_bridge_demo.widget.ProgressWebView
+        android:id="@+id/pwv"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        >
+    </com.xiaofan.safe_java_js_webview_bridge_demo.widget.ProgressWebView>
+
+</com.xiaofan.safe_java_js_webview_bridge_demo.percent.PercentLinearLayout>
