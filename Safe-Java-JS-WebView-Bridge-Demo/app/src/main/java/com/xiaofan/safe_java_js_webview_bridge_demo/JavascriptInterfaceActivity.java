@@ -5,6 +5,7 @@ import android.os.Bundle;
 import android.webkit.JavascriptInterface;
 import android.widget.Toast;
 
+import com.xiaofan.safe_java_js_webview_bridge_demo.util.LogUtil;
 import com.xiaofan.safe_java_js_webview_bridge_demo.widget.SafeWebView;
 
 /**
@@ -30,7 +31,10 @@ public class JavascriptInterfaceActivity extends Activity {
 
         mWebView = (SafeWebView) findViewById(R.id.webview);
         mWebView.getSettings().setJavaScriptEnabled(true);
-        mWebView.addJavascriptInterface(new JSInterface(), "jsInterface");
+        // 在这里注册的对象实例应该和Js代码中的保持一致
+//        mWebView.addJavascriptInterface(new JSInterface(), "jsInterface");
+        // 用来测试头像跳转的逻辑
+        mWebView.addJavascriptInterface(new JSInterface(), "demo");
         mWebView.loadUrl(mUrl2);
     }
 
@@ -55,6 +59,16 @@ public class JavascriptInterfaceActivity extends Activity {
                 @Override
                 public void run() {
                     Toast.makeText(getApplicationContext(), str, Toast.LENGTH_LONG).show();
+                }
+            });
+        }
+
+        @JavascriptInterface
+        public void clickOnAndroidPersonalHome(final String partyId) {
+            runOnUiThread(new Runnable() {
+                @Override
+                public void run() {
+                    Toast.makeText(getApplicationContext(),"跳转个人头像: " + partyId,Toast.LENGTH_LONG).show();
                 }
             });
         }
