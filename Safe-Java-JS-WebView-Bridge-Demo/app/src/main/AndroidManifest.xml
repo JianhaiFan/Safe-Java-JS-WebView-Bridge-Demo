@@ -24,6 +24,9 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
+        <activity android:name="com.xiaofan.safe_java_js_webview_bridge_demo.JavascriptInterfaceActivity">
+        </activity>
     </application>
 
 </manifest>

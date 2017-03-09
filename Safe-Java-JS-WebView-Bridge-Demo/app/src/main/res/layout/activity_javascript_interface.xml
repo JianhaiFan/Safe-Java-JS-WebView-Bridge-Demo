@@ -20,22 +20,14 @@
             android:textColor="#ffffff"
             android:gravity="center"
             android:layout_gravity="center"
-            android:text="H5详情页面"/>
+            android:text="JavaScriptInterface注解"/>
 
     </com.xiaofan.safe_java_js_webview_bridge_demo.percent.PercentLinearLayout>
 
-    <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center_horizontal"
-        android:onClick="click"
-        android:text="切换页面"/>
-
-    <com.xiaofan.safe_java_js_webview_bridge_demo.widget.ProgressWebView
-        android:id="@+id/pwv"
+    <com.xiaofan.safe_java_js_webview_bridge_demo.widget.SafeWebView
+        android:id="@+id/webview"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        >
-    </com.xiaofan.safe_java_js_webview_bridge_demo.widget.ProgressWebView>
+        android:layout_height="match_parent">
+    </com.xiaofan.safe_java_js_webview_bridge_demo.widget.SafeWebView>
 
 </com.xiaofan.safe_java_js_webview_bridge_demo.percent.PercentLinearLayout>
